@@ -1,0 +1,539 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Georgia, serif;
+}
+
+
+body{
+
+    background:#020014;
+    color:white;
+    overflow-x:hidden;
+
+}
+
+
+/* Galaxy background */
+
+#stars{
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    z-index:-2;
+
+
+    background:
+    radial-gradient(circle at 10% 20%,white 1px,transparent 2px),
+    radial-gradient(circle at 30% 80%,white 1px,transparent 2px),
+    radial-gradient(circle at 70% 30%,white 1px,transparent 2px),
+    radial-gradient(circle at 90% 70%,white 1px,transparent 2px),
+    radial-gradient(circle at 50% 50%,white 1px,transparent 2px);
+
+
+    background-size:250px 250px;
+
+    animation:moveStars 25s linear infinite;
+
+}
+
+
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-250px);
+    }
+
+}
+
+
+
+
+/* Moon */
+
+.moon{
+
+    position:fixed;
+
+    top:60px;
+    right:40px;
+
+    width:90px;
+    height:90px;
+
+    background:#fff3b0;
+
+    border-radius:50%;
+
+
+    box-shadow:
+    0 0 30px #fff3b0,
+    0 0 80px #ffccff;
+
+
+    opacity:0.9;
+
+}
+
+
+
+
+
+/* Screens */
+
+
+.screen{
+
+    min-height:100vh;
+
+    width:100%;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+/* Text */
+
+h1{
+
+    font-size:38px;
+
+    color:#ffd6ff;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 15px #d18cff,
+    0 0 30px #8c5cff;
+
+}
+
+
+
+p{
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+.cosmic-text p{
+
+    font-size:25px;
+
+    white-space:pre-line;
+
+}
+
+
+
+
+
+button{
+
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border-radius:30px;
+
+    border:1px solid white;
+
+    background:rgba(255,255,255,0.1);
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+
+    box-shadow:
+    0 0 20px #b06cff;
+
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+input{
+
+
+    margin-top:20px;
+
+    padding:15px;
+
+    width:260px;
+
+    border-radius:30px;
+
+    border:none;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+#error{
+
+    color:#ff8fa3;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+
+/* Countdown */
+
+
+#countdown{
+
+    margin-bottom:25px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.08);
+
+}
+
+
+
+#timer{
+
+    font-size:22px;
+
+    color:#ffd6ff;
+
+}
+
+
+
+
+
+
+/* Letter */
+
+
+.letter{
+
+    max-width:600px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    font-size:18px;
+
+    box-shadow:
+
+    0 0 30px rgba(180,120,255,0.3);
+
+}
+
+
+
+.letter p{
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* Photo constellation */
+
+
+.constellation{
+
+    position:relative;
+
+    width:100%;
+
+    height:520px;
+
+}
+
+
+
+
+.memory-star{
+
+
+    position:absolute;
+
+    width:150px;
+
+    padding:10px;
+
+
+    background:rgba(255,255,255,0.08);
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 25px #bb8cff;
+
+
+    animation:floating 4s infinite alternate;
+
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.memory-star img{
+
+
+    width:120px;
+
+    height:120px;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+    border:3px solid white;
+
+
+}
+
+
+
+.memory-star p{
+
+    font-size:13px;
+
+    margin-top:10px;
+
+}
+
+
+
+
+.star1{
+
+    top:20px;
+
+    left:15%;
+
+}
+
+
+.star2{
+
+    top:180px;
+
+    left:55%;
+
+}
+
+
+.star3{
+
+    top:320px;
+
+    left:25%;
+
+}
+
+
+.star4{
+
+    top:100px;
+
+    left:75%;
+
+}
+
+
+
+
+@keyframes floating{
+
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-25px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* Final */
+
+
+.finalText{
+
+    max-width:600px;
+
+    font-size:22px;
+
+    line-height:2;
+
+}
+
+
+
+.finalText h2{
+
+    margin-top:30px;
+
+    font-size:42px;
+
+    color:#ffb6e6;
+
+}
+
+
+
+.finalText h3{
+
+    margin-top:20px;
+
+    font-size:25px;
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+h1{
+
+    font-size:30px;
+
+}
+
+
+.cosmic-text p{
+
+    font-size:20px;
+
+}
+
+
+
+.letter{
+
+    padding:20px;
+
+    font-size:16px;
+
+}
+
+
+
+.moon{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+
+.memory-star{
+
+    width:120px;
+
+}
+
+
+.memory-star img{
+
+    width:90px;
+
+    height:90px;
+
+}
